@@ -22,6 +22,8 @@
             if(a=="" && b==""){
                 alert("Vui lòng nhập đầy đủ");
             }else{
+                trim(a); //loại bỏ khoảng trắng
+                trim(b);
                 a = Number(a);
                 b = Number(b);
                 giai_PT_bat_1(a,b);

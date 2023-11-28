@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <h2>Người dùng nhập vào một chuỗi rồi xử lý</h2>
+        <input type="text" id="n" value="">
+        <input type="button" id="xuly" value="Xử lý">
+        <h4 id="demo"></h4>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+    </form>
+    <script>
+        var button = document.getElementById('xuly');
+        button.onclick = function () {
+            var t = document.getElementById("n").value;
+            if (t == "") {
+                alert("Vui lòng nhập dữ liệu");
+            } else {
+                document.getElementById("demo").innerHTML = "Chuỗi vừa nhập : " + t;
+                let cleanText = t.trim();
+                let countText = t.length;
+                let uppText = t.toUpperCase();
+                console.log(countText);
+                document.getElementById("demo1").innerHTML = "Độ dài của chuỗi: " + countText;
+                document.getElementById("demo2").innerHTML = "Phóng to chuỗi: " + uppText;
+                let arr = t.split(",");
+                document.getElementById("demo3").innerHTML = "tách chuỗi vừa nhập thành mảng :";
+                let html = "Các phần tử mảng<ul>";
+                for(const x of arr){
+                    html += "<li>${x}</li>";
+                }
+                html = "</ul>";
+                document.getElementById("demo4").innerHTML = html;
+            } 
+        }
+    </script>
+</body>
+
+</html>
