@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap js</title>
+</head>
+
+<body>
+    <h4>kiểm tra số nguyên dương</h4>
+    <p id="demo"></p>
+    <script>
+        function ktraNguyenDuong(value) {
+            return (Number.isInteger(value));
+        }
+        let x = 10;
+    document.getElementById("demo").innerHTML = "Kiem tra so "+ x+ " có phải là số nguyên dương : "  + ktraNguyenDuong(x);
+    </script>
+    <h4>Kiểm đổi đúng kiểu dữ liệu</h4>
+    <p id="demo1"></p>
+    <script>
+        let a = '1213';
+        document.write(a,':',typeof a);
+        let b = 123;
+        document.write(b,':',typeof b);
+        a = parseInt(a);
+        let z = a+b;
+        document.write('<br>',z);
+    </script>
+</body>
+
+</html>
