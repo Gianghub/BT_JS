@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="soX">nhâp số x :</label>
+        <input type="text" name="x" id="x" value=""></form></body></html><br>
+        <label for="soY">nhập số y :</label>
+        <input type="text" name="y" id="y" value=""><br>
+        <input type="button" id="button" value="Tính">
+        <label for="kq">Kết quả </label><p id="kq"></p>
+    </form>
+    <script>
+        var button = document.getElementById('button');
+        button.onclick = function(){
+            let a = document.getElementById('x').value;
+            let b = document.getElementById('y').value;
+            if(a=="" && b==""){
+                alert("Vui lòng nhập đầy đủ");
+            }else{
+                a = Number(a);
+                b = Number(b);
+                giai_PT_bat_1(a,b);
+            }
+        }
+        function giai_PT_bat_1(a,b){
+            if((a==0 && b==0) || (a==0 && b!=0))
+            {
+                alert("Phương trình vô nghiệm");
+            }else if(a!=0 && b==0){
+                alert("Phương trình có nghiệm x = 0");
+            }else{
+                alert("Phương trình có nghiệm bằng" + (-b/a));
+            }
+        }
+    </script>
+</body>
+</html>
