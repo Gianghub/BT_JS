@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Tìm số nhỏ nhất trong mảng</h4>
+    <p id="show_arr"></p>
+    <p id="demo"></p>
+    <button id="tim">Tìm</button>
+    <script>
+        const button = document.getElementById('tim');
+        const arrNum = [100,1,5,7,10,99];
+        document.getElementById('show_arr').innerHTML = arrNum;
+        button.onclick = function(){
+        document.getElementById('demo').innerHTML = tim_Mix(arrNum);
+        }
+        function tim_Mix(arr){
+            let len = arr.lenght;
+            let min = Infinity;
+            while(len--){
+                if(arr[len]<min)
+                {
+                    min = arr[len];
+                }
+            }
+            return min;
+        }
+    </script>
+</body>
+</html>
